@@ -1,0 +1,14 @@
+---
+import Logotype from "@/assets/Logotype.astro";
+
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="flex w-full justify-center bg-smoke-950 text-smoke-50 py-12 px-4">
+  <div class="flex w-full max-w-7xl flex-wrap items-center justify-between">
+    <Logotype class="h-12" />
+    <p class="text-smoke-300">
+      Todos los derechos reservados. {currentYear}/{currentYear + 1}
+    </p>
+  </div>
+</footer>

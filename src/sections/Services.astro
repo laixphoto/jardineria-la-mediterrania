@@ -1,0 +1,117 @@
+---
+import Install from "@/assets/Install.astro";
+---
+
+<section class="mt-48 flex w-full flex-col items-center justify-center">
+  <h2 class="w-full max-w-6xl font-[350] font-serif text-6xl text-garden-600">
+    Nuestros servicios
+  </h2>
+
+  <nav class="mt-12 flex w-full justify-center border-y border-smoke-100 py-4">
+    <ul
+      class="flex w-full max-w-6xl justify-between font-semibold text-smoke-400"
+    >
+      <li
+        class="active flex-grow basis-0 transition-all hover:scale-110 hover:text-garden-600"
+      >
+        <a
+          href="/instalaciones"
+          class="flex items-center justify-center gap-3 p-2 text-center text-lg"
+        >
+          Instalaciones
+          <Install class="size-6" />
+        </a>
+      </li>
+
+      <li><span class="flex h-full w-px bg-smoke-100"></span></li>
+
+      <li
+        class="flex-grow basis-0 transition-all hover:scale-110 hover:text-garden-600"
+      >
+        <a
+          href="/diseño"
+          class="flex items-center justify-center gap-3 p-2 text-center text-lg"
+        >
+          Diseño
+          <Install class="size-6" />
+        </a>
+      </li>
+
+      <li><span class="flex h-full w-px bg-smoke-100"></span></li>
+
+      <li
+        class="flex-grow basis-0 transition-all hover:scale-110 hover:text-garden-600"
+      >
+        <a
+          href="/limpieza"
+          class="flex items-center justify-center gap-3 p-2 text-center text-lg"
+        >
+          Limpieza
+          <Install class="size-6" />
+        </a>
+      </li>
+
+      <li><span class="flex h-full w-px bg-smoke-100"></span></li>
+
+      <li
+        class="flex-grow basis-0 transition-all hover:scale-110 hover:text-garden-600"
+      >
+        <a
+          href="/poda"
+          class="flex items-center justify-center gap-3 p-2 text-center text-lg"
+        >
+          Poda
+          <Install class="size-6" />
+        </a>
+      </li>
+
+      <li><span class="flex h-full w-px bg-smoke-100"></span></li>
+
+      <li
+        class="flex-grow basis-0 transition-all hover:scale-110 hover:text-garden-600"
+      >
+        <a
+          href="/mantenimiento"
+          class="flex items-center justify-center gap-3 p-2 text-center text-lg"
+        >
+          Mantenimiento
+          <Install class="size-6" />
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <article class="mt-10 grid w-full max-w-6xl grid-cols-3 gap-8">
+    <img
+      src="/garden-1.jpg"
+      alt="Jardin piedras"
+      class="aspect-[3/4] w-full rounded-xl object-cover shadow-2xl shadow-black/40"
+    />
+    <img
+      src="/garden-2.jpg"
+      alt="Jardin arbol"
+      class="aspect-[3/4] w-full rounded-xl object-cover shadow-2xl shadow-black/40"
+    />
+
+    <div class="flex flex-col items-start gap-8 bg-garden-600 text-smoke-50 rounded-2xl p-8">
+      <p class="text-xl font-medium">
+        Lorem ipsum dolor sit amet consectetur. Et semper nibh potenti sed
+        volutpat risus ultricies nulla. Aliquam bibendum tincidunt suspendisse
+        sed. Elementum et turpis non sit viverra. Amet bibendum auctor facilisis
+        quis cursus neque.
+      </p>
+
+      <a
+        href="#servicios"
+        class="rounded-full bg-smoke-50 text-smoke-950 px-6 py-2 font-semibold transition-transform hover:scale-110"
+        >Ver servicio</a
+      >
+    </div>
+  </article>
+</section>
+
+<style>
+  .active {
+    @apply text-smoke-950;
+  }
+</style>
