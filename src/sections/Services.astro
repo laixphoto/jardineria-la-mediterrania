@@ -1,9 +1,13 @@
 ---
+import Clean from "@/assets/Clean.astro";
+import Cut from "@/assets/Cut.astro";
+import Design from "@/assets/Design.astro";
 import Install from "@/assets/Install.astro";
+import Mantain from "@/assets/Mantain.astro";
 ---
 
 <section class="mt-48 flex w-full flex-col items-center justify-center">
-  <h2 class="w-full max-w-6xl font-[350] font-serif text-6xl text-garden-600">
+  <h2 class="w-full max-w-6xl font-serif text-6xl font-[350] text-garden-600">
     Nuestros servicios
   </h2>
 
@@ -33,7 +37,7 @@ import Install from "@/assets/Install.astro";
           class="flex items-center justify-center gap-3 p-2 text-center text-lg"
         >
           Diseño
-          <Install class="size-6" />
+          <Design class="size-6" />
         </a>
       </li>
 
@@ -47,7 +51,7 @@ import Install from "@/assets/Install.astro";
           class="flex items-center justify-center gap-3 p-2 text-center text-lg"
         >
           Limpieza
-          <Install class="size-6" />
+          <Clean class="size-6" />
         </a>
       </li>
 
@@ -61,7 +65,7 @@ import Install from "@/assets/Install.astro";
           class="flex items-center justify-center gap-3 p-2 text-center text-lg"
         >
           Poda
-          <Install class="size-6" />
+          <Cut class="size-6" />
         </a>
       </li>
 
@@ -75,7 +79,7 @@ import Install from "@/assets/Install.astro";
           class="flex items-center justify-center gap-3 p-2 text-center text-lg"
         >
           Mantenimiento
-          <Install class="size-6" />
+          <Mantain class="size-6" />
         </a>
       </li>
     </ul>
@@ -93,7 +97,9 @@ import Install from "@/assets/Install.astro";
       class="aspect-[3/4] w-full rounded-xl object-cover shadow-2xl shadow-black/40"
     />
 
-    <div class="flex flex-col items-start gap-8 bg-garden-600 text-smoke-50 rounded-2xl p-8">
+    <div
+      class="flex flex-col items-start gap-8 rounded-2xl bg-garden-600 p-8 text-smoke-50"
+    >
       <p class="text-xl font-medium">
         Lorem ipsum dolor sit amet consectetur. Et semper nibh potenti sed
         volutpat risus ultricies nulla. Aliquam bibendum tincidunt suspendisse
@@ -103,7 +109,7 @@ import Install from "@/assets/Install.astro";
 
       <a
         href="#servicios"
-        class="rounded-full bg-smoke-50 text-smoke-950 px-6 py-2 font-semibold transition-transform hover:scale-110"
+        class="rounded-full bg-smoke-50 px-6 py-2 font-semibold text-smoke-950 transition-transform hover:scale-110"
         >Ver servicio</a
       >
     </div>

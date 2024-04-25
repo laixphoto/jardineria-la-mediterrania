@@ -1,10 +1,15 @@
 ---
+import Form from "@/components/Form.astro";
 import Logotype from "@/assets/Logotype.astro";
 
 const currentYear = new Date().getFullYear();
 ---
 
-<footer class="flex w-full justify-center bg-smoke-950 text-smoke-50 py-12 px-4">
+<Form />
+
+<footer
+  class="flex w-full justify-center bg-smoke-950 px-4 py-12 text-smoke-50"
+>
   <div class="flex w-full max-w-7xl flex-wrap items-center justify-between">
     <Logotype class="h-12" />
     <p class="text-smoke-300">

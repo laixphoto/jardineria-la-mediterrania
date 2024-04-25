@@ -6,43 +6,45 @@ import Isotype from "@/assets/Isotype.astro";
   class="fixed left-0 top-0 z-50 flex w-full justify-center"
   transition:persist
 >
-  <nav class="flex w-full max-w-7xl items-center justify-between p-2">
+  <nav class="flex w-full max-w-7xl items-center justify-between px-4 py-2">
     <div class="flex flex-grow basis-0">
-      <a href="/"><Isotype class="text-garden-600 w-10" /></a>
+      <a href="/"><Isotype class="w-10 text-garden-600" /></a>
     </div>
 
-    <ul class="flex">
-      <li>
+    <ul
+      class="flex items-center rounded-full border border-smoke-100 bg-smoke-50/90 p-2 shadow-lg backdrop-blur"
+    >
+      <li class="flex">
         <a
           href="/"
-          class="hover:text-garden-600 w-full px-8 py-2 text-center text-lg font-medium transition-colors"
+          class="w-full rounded-full px-8 py-1 text-center text-lg font-medium transition-colors hover:bg-garden-600 hover:text-smoke-50"
         >
           Inicio
         </a>
       </li>
 
-      <li>
+      <li class="flex">
         <a
           href="/servicios"
-          class="hover:text-garden-600 w-full px-8 py-2 text-center text-lg font-medium transition-colors"
+          class="w-full rounded-full px-8 py-1 text-center text-lg font-medium transition-colors hover:bg-garden-600 hover:text-smoke-50"
         >
           Servicios
         </a>
       </li>
 
-      <li>
+      <li class="flex">
         <a
           href="/proyectos"
-          class="hover:text-garden-600 w-full px-8 py-2 text-center text-lg font-medium transition-colors"
+          class="w-full rounded-full px-8 py-1 text-center text-lg font-medium transition-colors hover:bg-garden-600 hover:text-smoke-50"
         >
           Proyectos
         </a>
       </li>
 
-      <li>
+      <li class="flex">
         <a
           href="/contacto"
-          class="hover:text-garden-600 w-full px-8 py-2 text-center text-lg font-medium transition-colors"
+          class="w-full rounded-full px-8 py-1 text-center text-lg font-medium transition-colors hover:bg-garden-600 hover:text-smoke-50"
         >
           Contacto
         </a>
@@ -51,7 +53,7 @@ import Isotype from "@/assets/Isotype.astro";
 
     <div class="flex flex-grow basis-0 justify-end">
       <button
-        class="border-smoke-950 rounded-full border-2 px-6 py-2 font-medium"
+        class="rounded-full bg-garden-600 px-6 py-2 font-medium text-smoke-50 shadow-lg transition-transform hover:scale-110"
       >
         Idioma | ES
       </button>

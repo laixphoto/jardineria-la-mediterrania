@@ -1,0 +1,76 @@
+<section
+  class="flex w-full justify-center bg-smoke-950 px-4 py-12 text-smoke-50"
+>
+  <form class="flex w-full max-w-2xl flex-col gap-4 items-start">
+    <fieldset class="rounded-xl border border-smoke-700 p-3 w-full">
+      <legend class="px-2 text-sm text-smoke-700">Nombre</legend>
+      <input
+        type="text"
+        class="w-full bg-transparent placeholder-smoke-700 outline-none"
+        placeholder="Ej. Carlos Garcia"
+        required
+      />
+    </fieldset>
+
+    <div class="flex w-full gap-4">
+      <fieldset class="grow basis-0 rounded-xl border border-smoke-700 p-3">
+        <legend class="px-2 text-sm text-smoke-700">Teléfono</legend>
+        <input
+          type="tel"
+          class="w-full bg-transparent placeholder-smoke-700 outline-none"
+          placeholder="Ej. 600 600 600"
+        />
+      </fieldset>
+
+      <fieldset class="grow basis-0 rounded-xl border border-smoke-700 p-3">
+        <legend class="px-2 text-sm text-smoke-700">Email</legend>
+        <input
+          type="email"
+          class="w-full bg-transparent placeholder-smoke-700 outline-none"
+          placeholder="Ej. carlosg@gmail.com"
+          required
+        />
+      </fieldset>
+    </div>
+
+    <fieldset class="rounded-xl border border-smoke-700 p-3 w-full">
+      <legend class="px-2 text-sm text-smoke-700">Servicio</legend>
+      <select
+        class="w-full bg-transparent placeholder-smoke-700 outline-none [&>option]:bg-smoke-950"
+        required
+      >
+        <option value="" disabled selected>Selecciona un servicio</option>
+        <option value="instalacion">Instalación</option>
+        <option value="diseño">Diseño</option>
+        <option value="limpieza">Limpieza</option>
+        <option value="poda">Poda</option>
+        <option value="mantenimiento">Mantenimiento</option>
+      </select>
+    </fieldset>
+
+    <fieldset class="rounded-xl border border-smoke-700 p-3 w-full">
+      <legend class="px-2 text-sm text-smoke-700">Ubicacion</legend>
+      <input
+        type="text"
+        class="w-full bg-transparent placeholder-smoke-700 outline-none"
+        placeholder="Ej. Vilanova i la Geltrú"
+        required
+      />
+    </fieldset>
+
+    <fieldset class="rounded-xl border border-smoke-700 p-3 w-full">
+      <legend class="px-2 text-sm text-smoke-700">Mensaje</legend>
+      <textarea
+        class="min-h-32 w-full resize-none bg-transparent placeholder-smoke-700 outline-none"
+        placeholder="Tu mensaje..."
+        required></textarea>
+    </fieldset>
+
+    <button
+      type="submit"
+      class="rounded-full bg-garden-600 px-12 py-3 font-medium text-smoke-50 shadow-lg transition-transform hover:scale-110"
+    >
+      Enviar
+    </button>
+  </form>
+</section>
