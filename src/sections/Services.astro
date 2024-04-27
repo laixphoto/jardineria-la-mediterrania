@@ -83,7 +83,7 @@ import { services } from "@/lib/services";
     {
       services.map(({ title, slug, image1, image2, description }) => (
         <li class="flex w-full shrink-0 snap-center justify-center">
-          <article class="mt-10 mb-24 grid w-full max-w-7xl grid-cols-3 gap-8">
+          <article class="mb-24 mt-10 grid w-full max-w-7xl grid-cols-3 gap-8">
             <img
               src={image1}
               alt={title}
@@ -144,4 +144,5 @@ import { services } from "@/lib/services";
   }
 
   init_services();
+  document.addEventListener("astro:after-swap", init_services);
 </script>

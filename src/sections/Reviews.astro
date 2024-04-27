@@ -70,4 +70,5 @@ import { reviews } from "@/lib/reviews";
   }
 
   init_reviews();
+  document.addEventListener("astro:after-swap", init_reviews);
 </script>

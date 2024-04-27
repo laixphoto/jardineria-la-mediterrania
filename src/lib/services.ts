@@ -1,7 +1,7 @@
 export const services = [
   {
     title: "Instalaciones",
-    slug: "/instlaciones",
+    slug: "/instalaciones",
     image1: "garden-1.jpg",
     image2: "garden-2.jpg",
     description: "En La Mediterrània Jardinería, ofrecemos servicios de instalación de riegos automáticos y césped tanto artificial como natural. Desde sistemas eficientes de riego hasta la creación de espacios verdes con césped de la más alta calidad, nuestro equipo se encarga de transformar tus áreas exteriores en oasis de frescura y belleza."
