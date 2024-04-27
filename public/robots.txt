@@ -1,5 +1,2 @@
 User-agent: *
 Allow: /
-Disallow: /player/
-
-Sitemap: https://www.kncelados.com/sitemap-index.xml

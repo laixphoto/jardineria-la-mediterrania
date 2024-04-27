@@ -1,8 +1,8 @@
 {
-  "background_color": "#060d14",
-  "theme_color": "#060d14",
-  "name": "Kncelados | Un podcast de tonterías varias",
-  "short_name": "Kncelados",
+  "background_color": "#f6f6f6",
+  "theme_color": "#f6f6f6",
+  "name": "Jardineria La Mediterrània | Servicios de jardinería",
+  "short_name": "Jardineria La Mediterrània",
   "display": "standalone",
   "start_url": "/",
   "icons": [
