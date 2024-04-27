@@ -1,76 +1,151 @@
+---
+import Whastapp from "@/assets/Whastapp.astro";
+import Mail from "@/assets/Mail.astro";
+import Instagram from "@/assets/Instagram.astro";
+import Tiktok from "@/assets/Tiktok.astro";
+---
+
 <section
-  class="flex w-full justify-center bg-smoke-950 px-4 py-12 text-smoke-50"
+  id="contacto"
+  class="flex w-full justify-center bg-smoke-950 px-4 py-12 pt-24 text-smoke-50 lg:pt-48"
 >
-  <form class="flex w-full max-w-2xl flex-col gap-4 items-start">
-    <fieldset class="rounded-xl border border-smoke-700 p-3 w-full">
-      <legend class="px-2 text-sm text-smoke-700">Nombre</legend>
-      <input
-        type="text"
-        class="w-full bg-transparent placeholder-smoke-700 outline-none"
-        placeholder="Ej. Carlos Garcia"
-        required
-      />
-    </fieldset>
+  <div class="grid w-full max-w-6xl gap-8 lg:grid-cols-2">
+    <div class="flex flex-col items-start">
+      <h2 class="text-2xl font-semibold text-garden-300 lg:text-5xl">
+        Contacta<br />con nosotros
+      </h2>
 
-    <div class="flex w-full gap-4">
-      <fieldset class="grow basis-0 rounded-xl border border-smoke-700 p-3">
-        <legend class="px-2 text-sm text-smoke-700">Teléfono</legend>
-        <input
-          type="tel"
-          class="w-full bg-transparent placeholder-smoke-700 outline-none"
-          placeholder="Ej. 600 600 600"
-        />
-      </fieldset>
+      <p class="mt-8 text-lg">
+        Rellena nuestro formulario de contacto, y visitanos en nuestras redes.
+      </p>
 
-      <fieldset class="grow basis-0 rounded-xl border border-smoke-700 p-3">
-        <legend class="px-2 text-sm text-smoke-700">Email</legend>
-        <input
-          type="email"
-          class="w-full bg-transparent placeholder-smoke-700 outline-none"
-          placeholder="Ej. carlosg@gmail.com"
-          required
-        />
-      </fieldset>
+      <ul class="flex flex-col">
+        <li class="flex items-center border-b border-smoke-400 px-2 py-4">
+          <a
+            href="https://wa.me/34633443103"
+            class="text-md mt-10 flex gap-2 transition-transform hover:scale-110"
+          >
+            <Whastapp class="size-8" /> 633 443 103
+          </a>
+        </li>
+
+        <li class="flex items-center border-b border-smoke-400 px-2 py-4">
+          <a
+            href="mailto:info@jardinerialamediterrania.com"
+            class="text-md mt-2 flex gap-2 transition-transform hover:scale-110"
+          >
+            <Mail class="size-8" /> info@jardinerialamediterrania.com
+          </a>
+        </li>
+
+        <li class="flex items-center gap-4 px-2 py-4">
+          <a
+            href="https://www.instagram.com/jardinerialamediterrania"
+            target="_blank"
+            rel="nofollow"
+            class="text-md mt-2 flex gap-2 transition-transform hover:scale-110"
+          >
+            <Instagram class="size-8" />
+            <span class="sr-only">Instagram</span>
+          </a>
+          <a
+            href="https://www.tiktok.com/@jardineria.lamedi"
+            target="_blank"
+            rel="nofollow"
+            class="text-md mt-2 flex gap-2 transition-transform hover:scale-110"
+          >
+            <Tiktok class="size-8" />
+            <span class="sr-only">Tiktok</span>
+          </a>
+        </li>
+      </ul>
     </div>
 
-    <fieldset class="rounded-xl border border-smoke-700 p-3 w-full">
-      <legend class="px-2 text-sm text-smoke-700">Servicio</legend>
-      <select
-        class="w-full bg-transparent placeholder-smoke-700 outline-none [&>option]:bg-smoke-950"
-        required
+    <form class="flex w-full flex-col items-start gap-4">
+      <label class="w-full">
+        <fieldset class="w-full rounded-xl border border-smoke-700 p-3">
+          <legend class="px-2 text-sm text-smoke-700">Nombre</legend>
+          <input
+            type="text"
+            class="w-full bg-transparent placeholder-smoke-700 outline-none"
+            placeholder="Ej. Carlos Garcia"
+            required
+          />
+        </fieldset>
+      </label>
+
+      <div class="flex w-full flex-wrap gap-4">
+        <label class="w-full lg:grow lg:basis-0">
+          <fieldset class="w-full rounded-xl border border-smoke-700 p-3">
+            <legend class="px-2 text-sm text-smoke-700">Teléfono</legend>
+            <input
+              type="tel"
+              class="w-full bg-transparent placeholder-smoke-700 outline-none"
+              placeholder="Ej. 600 600 600"
+            />
+          </fieldset>
+        </label>
+
+        <label class="w-full lg:grow lg:basis-0">
+          <fieldset
+            class="w-full rounded-xl border border-smoke-700 p-3 lg:grow lg:basis-0"
+          >
+            <legend class="px-2 text-sm text-smoke-700">Email</legend>
+            <input
+              type="email"
+              class="w-full bg-transparent placeholder-smoke-700 outline-none"
+              placeholder="Ej. carlosg@gmail.com"
+              required
+            />
+          </fieldset>
+        </label>
+      </div>
+
+      <label class="w-full">
+        <fieldset class="w-full rounded-xl border border-smoke-700 p-3">
+          <legend class="px-2 text-sm text-smoke-700">Servicio</legend>
+          <select
+            class="w-full bg-transparent placeholder-smoke-700 outline-none [&>option]:bg-smoke-950"
+            required
+          >
+            <option value="" disabled selected>Selecciona un servicio</option>
+            <option value="instalacion">Instalación</option>
+            <option value="diseño">Diseño</option>
+            <option value="limpieza">Limpieza</option>
+            <option value="poda">Poda</option>
+            <option value="mantenimiento">Mantenimiento</option>
+          </select>
+        </fieldset>
+      </label>
+
+      <label class="w-full">
+        <fieldset class="w-full rounded-xl border border-smoke-700 p-3">
+          <legend class="px-2 text-sm text-smoke-700">Ubicacion</legend>
+          <input
+            type="text"
+            class="w-full bg-transparent placeholder-smoke-700 outline-none"
+            placeholder="Ej. Vilanova i la Geltrú"
+            required
+          />
+        </fieldset>
+      </label>
+
+      <label class="w-full">
+        <fieldset class="w-full rounded-xl border border-smoke-700 p-3">
+          <legend class="px-2 text-sm text-smoke-700">Mensaje</legend>
+          <textarea
+            class="min-h-32 w-full resize-none bg-transparent placeholder-smoke-700 outline-none"
+            placeholder="Tu mensaje..."
+            required></textarea>
+        </fieldset>
+      </label>
+
+      <button
+        type="submit"
+        class="rounded-full bg-garden-600 px-12 py-3 font-medium text-smoke-50 shadow-lg transition-transform hover:scale-110"
       >
-        <option value="" disabled selected>Selecciona un servicio</option>
-        <option value="instalacion">Instalación</option>
-        <option value="diseño">Diseño</option>
-        <option value="limpieza">Limpieza</option>
-        <option value="poda">Poda</option>
-        <option value="mantenimiento">Mantenimiento</option>
-      </select>
-    </fieldset>
-
-    <fieldset class="rounded-xl border border-smoke-700 p-3 w-full">
-      <legend class="px-2 text-sm text-smoke-700">Ubicacion</legend>
-      <input
-        type="text"
-        class="w-full bg-transparent placeholder-smoke-700 outline-none"
-        placeholder="Ej. Vilanova i la Geltrú"
-        required
-      />
-    </fieldset>
-
-    <fieldset class="rounded-xl border border-smoke-700 p-3 w-full">
-      <legend class="px-2 text-sm text-smoke-700">Mensaje</legend>
-      <textarea
-        class="min-h-32 w-full resize-none bg-transparent placeholder-smoke-700 outline-none"
-        placeholder="Tu mensaje..."
-        required></textarea>
-    </fieldset>
-
-    <button
-      type="submit"
-      class="rounded-full bg-garden-600 px-12 py-3 font-medium text-smoke-50 shadow-lg transition-transform hover:scale-110"
-    >
-      Enviar
-    </button>
-  </form>
+        Enviar
+      </button>
+    </form>
+  </div>
 </section>

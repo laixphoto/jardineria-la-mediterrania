@@ -1,16 +1,73 @@
-<section class="bg-garden-600 text-smoke-50 mt-48 w-full flex justify-center">
-  <div class="py-32 flex w-full max-w-6xl flex-col items-center justify-center">
-    <h2 class="max-w-4xl text-center text-3xl font-semibold">
-      Lorem ipsum dolor sit amet consectetur. Et semper nibh potenti sed
-      volutpat risus ultricies nulla. Aliquam bibendum tincidunt suspendisse
-      sed. Elementum et turpis non sit viverra. Amet bibendum auctor facilisis
-      quis cursus neque.
-    </h2>
+---
+import { reviews } from "@/lib/reviews";
+---
 
-    <nav class="mt-12 flex items-center justify-center gap-2">
-      <button class="size-2 rounded-full bg-smoke-50"></button>
-      <button class="size-2 rounded-full bg-smoke-50"></button>
-      <button class="size-2 rounded-full bg-smoke-50"></button>
+<section
+  class="mt-16 flex w-full flex-col items-center bg-garden-600 py-12 text-smoke-50 lg:mt-24 lg:py-32"
+>
+  <h2 class="px-4 font-serif text-4xl font-[350] text-garden-100 lg:text-5xl text-center">
+    Lo que opinan<br />nuestros clientes
+  </h2>
+
+  <div class="mt-12 flex w-full flex-col items-center justify-center">
+    <ul id="reviews" class="flex w-full snap-x snap-mandatory overflow-x-auto">
+      {
+        reviews.map(({ user, review }) => (
+          <li class="flex w-full shrink-0 snap-center flex-col items-center justify-center gap-4 px-4">
+            <span>{user}</span>
+            <h3 class="w-full max-w-4xl text-center text-xl font-semibold lg:text-3xl">
+              {review}
+            </h3>
+          </li>
+        ))
+      }
+    </ul>
+
+    <nav id="reviews-nav" class="mt-12 flex items-center justify-center gap-2">
+      {
+        reviews.map((_, ind) => (
+          <button
+            class:list={[
+              "size-2 rounded-full bg-smoke-50 opacity-50",
+              ind === 0 && "active",
+            ]}
+          />
+        ))
+      }
     </nav>
   </div>
 </section>
+
+<style>
+  .active {
+    @apply opacity-100;
+  }
+
+  ul {
+    scrollbar-width: none;
+  }
+</style>
+
+<script>
+  function init_reviews() {
+    const reviews_nav = document.querySelectorAll("#reviews-nav > button");
+    const reviews = document.querySelector("#reviews");
+    const wW = window.innerWidth;
+
+    if (!reviews) return;
+
+    reviews_nav.forEach((el, ind) => {
+      el.addEventListener("mouseenter", () => {
+        reviews_nav.forEach((el) => el.classList.remove("active"));
+        el.classList.add("active");
+
+        reviews.scrollTo({
+          left: wW * ind,
+          behavior: "smooth",
+        });
+      });
+    });
+  }
+
+  init_reviews();
+</script>
