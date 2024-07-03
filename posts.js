@@ -16,8 +16,6 @@ const posts = await page.evaluate(() => {
     .map((img) => ({ url: img.src, alt: img.alt }));
 });
 
-console.log(posts);
-
 const viewportSize = 400;
 
 for (let i = 0; i < posts.length; i++) {
