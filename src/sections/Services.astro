@@ -1,9 +1,9 @@
 ---
-import Clean from "@/assets/Clean.astro";
 import Cut from "@/assets/Cut.astro";
 import Design from "@/assets/Design.astro";
 import Install from "@/assets/Install.astro";
 import Mantain from "@/assets/Mantain.astro";
+
 import { services } from "@/lib/services";
 ---
 
@@ -14,98 +14,90 @@ import { services } from "@/lib/services";
   <p
     class="w-full max-w-7xl font-serif text-5xl font-[350] text-garden-600 lg:text-6xl"
   >
-<<<<<<< HEAD
     Servicios de jardinería
   </p>
-=======
-    Servicios de jardineria
-  </h2>
->>>>>>> 0014c0b0d3691c3ff59ad533a954756a4dc9a509
-
-  <nav
-    id="service-nav"
-    class="mt-12 flex w-full justify-center border-y border-smoke-100 py-4"
-  >
-    <ul
-      class="flex w-full max-w-7xl flex-wrap justify-between font-semibold text-smoke-400"
-    >
-      <li class="flex-grow basis-0">
-        <a
-          href="/mantenimiento-de-jardines"
-          class="flex w-full items-center justify-between gap-3 p-2 text-lg transition-all lg:justify-center lg:text-center lg:hover:scale-110"
-        >
-          Mantenimiento
-          <Mantain class="size-6" />
-        </a>
-      </li>
-
-      <li class="w-full lg:flex-grow lg:basis-0 lg:border-r">
-        <a
-          href="/puesta-a-punto-de-jardines"
-          class="flex w-full items-center justify-between gap-3 p-2 text-lg transition-all lg:justify-center lg:text-center lg:hover:scale-110"
-        >
-          Puesta a punto
-          <Design class="size-6" />
-        </a>
-      </li>
-
-      <li class="active w-full lg:flex-grow lg:basis-0 lg:border-r">
-        <a
-          href="/instalacion-de-cesped-y-riegos"
-          class="flex w-full items-center justify-between gap-3 p-2 text-lg transition-all lg:justify-center lg:text-center lg:hover:scale-110"
-        >
-          Instalacion de cesped
-          <Install class="size-6" />
-        </a>
-      </li>
-
-      <li class="active w-full lg:flex-grow lg:basis-0 lg:border-r">
-        <a
-          href="/poda-y-limpieza-de-jardines"
-          class="flex w-full items-center justify-between gap-3 p-2 text-lg transition-all lg:justify-center lg:text-center lg:hover:scale-110"
-        >
-          Poda y limpieza
-          <Cut class="size-6" />
-        </a>
-      </li>
-    </ul>
-  </nav>
-
-  <ul
-    id="services"
-    class="hidden snap-x snap-mandatory overflow-x-auto lg:flex"
-  >
-    {
-      services.map(({ title, slug, image1, image2, description }) => (
-        <li class="flex w-full shrink-0 snap-center justify-center">
-          <article class="mb-24 mt-10 grid w-full max-w-7xl grid-cols-3 gap-8">
-            <img
-              src={image1}
-              alt={title}
-              class="aspect-[3/4] w-full rounded-xl object-cover shadow-2xl shadow-black/40"
-            />
-            <img
-              src={image2}
-              alt={title}
-              class="aspect-[3/4] w-full rounded-xl object-cover shadow-2xl shadow-black/40"
-            />
-
-            <div class="flex flex-col items-start justify-center gap-8 rounded-2xl bg-garden-600 p-8 text-smoke-50">
-              <h2 class="text-2xl font-medium">{title}</h2>
-              <p>{description}</p>
-              <a
-                href={slug}
-                class="rounded-full bg-smoke-50 px-6 py-2 font-semibold text-smoke-950 transition-transform hover:scale-110"
-              >
-                {title}
-              </a>
-            </div>
-          </article>
-        </li>
-      ))
-    }
-  </ul>
 </section>
+
+<nav
+  id="service-nav"
+  class="mt-12 flex w-full justify-center border-y border-smoke-100 py-4"
+>
+  <ul
+    class="flex w-full max-w-7xl flex-wrap justify-between font-semibold text-smoke-400"
+  >
+    <li class="flex-grow basis-0">
+      <a
+        href="/mantenimiento-de-jardines"
+        class="flex w-full items-center justify-between gap-3 p-2 text-lg transition-all lg:justify-center lg:text-center lg:hover:scale-110"
+      >
+        Mantenimiento
+        <Mantain class="size-6" />
+      </a>
+    </li>
+
+    <li class="w-full lg:flex-grow lg:basis-0 lg:border-r">
+      <a
+        href="/puesta-a-punto-de-jardines"
+        class="flex w-full items-center justify-between gap-3 p-2 text-lg transition-all lg:justify-center lg:text-center lg:hover:scale-110"
+      >
+        Puesta a punto
+        <Design class="size-6" />
+      </a>
+    </li>
+
+    <li class="active w-full lg:flex-grow lg:basis-0 lg:border-r">
+      <a
+        href="/instalacion-de-cesped-y-riegos"
+        class="flex w-full items-center justify-between gap-3 p-2 text-lg transition-all lg:justify-center lg:text-center lg:hover:scale-110"
+      >
+        Instalacion de cesped
+        <Install class="size-6" />
+      </a>
+    </li>
+
+    <li class="active w-full lg:flex-grow lg:basis-0 lg:border-r">
+      <a
+        href="/poda-y-limpieza-de-jardines"
+        class="flex w-full items-center justify-between gap-3 p-2 text-lg transition-all lg:justify-center lg:text-center lg:hover:scale-110"
+      >
+        Poda y limpieza
+        <Cut class="size-6" />
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<ul id="services" class="hidden snap-x snap-mandatory overflow-x-auto lg:flex">
+  {
+    services.map(({ title, slug, image1, image2, description }) => (
+      <li class="flex w-full shrink-0 snap-center justify-center">
+        <article class="mb-24 mt-10 grid w-full max-w-7xl grid-cols-3 gap-8">
+          <img
+            src={image1}
+            alt={title}
+            class="aspect-[3/4] w-full rounded-xl object-cover shadow-2xl shadow-black/40"
+          />
+          <img
+            src={image2}
+            alt={title}
+            class="aspect-[3/4] w-full rounded-xl object-cover shadow-2xl shadow-black/40"
+          />
+
+          <div class="flex flex-col items-start justify-center gap-8 rounded-2xl bg-garden-600 p-8 text-smoke-50">
+            <h2 class="text-2xl font-medium">{title}</h2>
+            <p>{description}</p>
+            <a
+              href={slug}
+              class="rounded-full bg-smoke-50 px-6 py-2 font-semibold text-smoke-950 transition-transform hover:scale-110"
+            >
+              {title}
+            </a>
+          </div>
+        </article>
+      </li>
+    ))
+  }
+</ul>
 
 <style>
   .active {
