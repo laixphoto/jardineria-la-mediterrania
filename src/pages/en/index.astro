@@ -1,0 +1,21 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Welcome from "@/sections/Welcome.astro";
+import Design from "@/sections/Design.astro";
+import Services from "@/sections/Services.astro";
+import Reviews from "@/sections/Reviews.astro";
+import Gallery from "@/sections/Gallery.astro";
+---
+
+<Layout
+  title="Jardineria La Mediterrània | Servicios de jardinería"
+  description="Jardinería La Mediterrània, tus jardineros en Sitges, Vilafranca, Ribes, Cunit y alrededores. Confía en nosotros para cuidar tu jardín con el mismo cariño y dedicación que hemos heredado generación tras generación."
+>
+  <main class="flex w-full flex-col items-center">
+    <Welcome />
+    <Services />
+    <Design />
+    <Gallery />
+    <Reviews />
+  </main>
+</Layout>

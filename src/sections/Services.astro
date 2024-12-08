@@ -20,49 +20,45 @@ import { services } from "@/lib/services";
 
 <nav
   id="service-nav"
-  class="mt-12 flex w-full justify-center border-y border-smoke-100 py-4"
+  class="mt-12 flex w-full justify-center border-y border-smoke-100 py-4 px-4 lg:px-0"
 >
   <ul
     class="flex w-full max-w-7xl flex-wrap justify-between font-semibold text-smoke-400"
   >
-    <li class="flex-grow basis-0">
-      <a
-        href="/mantenimiento-de-jardines"
+    <li class="active flex-grow basis-0">
+      <p
         class="flex w-full items-center justify-between gap-3 p-2 text-lg transition-all lg:justify-center lg:text-center lg:hover:scale-110"
       >
         Mantenimiento
         <Mantain class="size-6" />
-      </a>
+      </p>
     </li>
 
     <li class="w-full lg:flex-grow lg:basis-0 lg:border-r">
-      <a
-        href="/puesta-a-punto-de-jardines"
+      <p
         class="flex w-full items-center justify-between gap-3 p-2 text-lg transition-all lg:justify-center lg:text-center lg:hover:scale-110"
       >
         Puesta a punto
         <Design class="size-6" />
-      </a>
+      </p>
     </li>
 
-    <li class="active w-full lg:flex-grow lg:basis-0 lg:border-r">
-      <a
-        href="/instalacion-de-cesped-y-riegos"
+    <li class="w-full lg:flex-grow lg:basis-0 lg:border-r">
+      <p
         class="flex w-full items-center justify-between gap-3 p-2 text-lg transition-all lg:justify-center lg:text-center lg:hover:scale-110"
       >
-        Instalacion de cesped
+        Instalación de cesped
         <Install class="size-6" />
-      </a>
+      </p>
     </li>
 
-    <li class="active w-full lg:flex-grow lg:basis-0 lg:border-r">
-      <a
-        href="/poda-y-limpieza-de-jardines"
+    <li class="w-full lg:flex-grow lg:basis-0 lg:border-r">
+      <p
         class="flex w-full items-center justify-between gap-3 p-2 text-lg transition-all lg:justify-center lg:text-center lg:hover:scale-110"
       >
         Poda y limpieza
         <Cut class="size-6" />
-      </a>
+      </p>
     </li>
   </ul>
 </nav>

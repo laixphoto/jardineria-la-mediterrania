@@ -1,5 +1,10 @@
 ---
 import Isotype from "@/assets/Isotype.astro";
+
+const { pathname } = Astro.url;
+const isEn = pathname.includes("/en");
+
+console.log(isEn);
 ---
 
 <header
@@ -27,7 +32,7 @@ import Isotype from "@/assets/Isotype.astro";
 
       <li class="flex">
         <a
-          href="#servicios"
+          href="/#servicios"
           class="w-full rounded-full px-8 py-1 text-center text-lg font-medium transition-all hover:bg-garden-600 hover:text-smoke-50"
         >
           Servicios
@@ -36,10 +41,10 @@ import Isotype from "@/assets/Isotype.astro";
 
       <li class="flex">
         <a
-          href="/galeria"
+          href="/blog"
           class="w-full rounded-full px-8 py-1 text-center text-lg font-medium transition-all hover:bg-garden-600 hover:text-smoke-50"
         >
-          Galería
+          Blog
         </a>
       </li>
 
@@ -54,11 +59,12 @@ import Isotype from "@/assets/Isotype.astro";
     </ul>
 
     <div class="flex flex-grow basis-0 justify-end">
-      <button
+      <a
+        href={isEn ? "/" : "/en"}
         class="rounded-full bg-garden-600 px-6 py-2 font-medium text-smoke-50 shadow-lg transition-transform hover:scale-110"
       >
-        ESP
-      </button>
+        {isEn ? "ES" : "EN"}
+      </a>
     </div>
   </nav>
 </header>
