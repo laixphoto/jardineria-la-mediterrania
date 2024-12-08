@@ -3,10 +3,10 @@ import { reviews } from "@/lib/reviews";
 ---
 
 <section
-  class="mt-16 flex w-full flex-col items-center bg-garden-600 py-12 text-smoke-50 lg:mt-24 lg:py-32"
+  class="mt-16 flex w-full flex-col items-center bg-garden-600 py-12 text-smoke-50 lg:mt-48 lg:py-32"
 >
-  <h2 class="px-4 font-serif text-4xl font-[350] text-garden-100 lg:text-5xl text-center">
-    Lo que opinan<br />nuestros clientes
+  <h2 class="px-4 text-center font-serif text-3xl font-[350] text-garden-100">
+    Lo que opinan nuestros clientes
   </h2>
 
   <div class="mt-12 flex w-full flex-col items-center justify-center">
@@ -23,18 +23,14 @@ import { reviews } from "@/lib/reviews";
       }
     </ul>
 
-    <nav id="reviews-nav" class="mt-12 flex items-center justify-center gap-2">
-      {
-        reviews.map((_, ind) => (
-          <button
-            class:list={[
-              "size-2 rounded-full bg-smoke-50 opacity-50",
-              ind === 0 && "active",
-            ]}
-          />
-        ))
-      }
-    </nav>
+    <a
+      href="  https://www.google.com/search?q=Jardineria%20La%20Mediterr%C3%A0nia%20Rese%C3%B1as&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxI2Nje3tLQwMjA1tzAxMTE0MDYx38DI-IpRxSuxKCUzL7UoM1HBJ1HBNzUlsyS1qOjwgjygQFBqcerhjYnFi1iJUgYAkacwtGgAAAA&rldimm=3779982057844410347&tbm=lcl&hl=es&sa=X&ved=0CBsQ9fQKKABqFwoTCIiDxuLPmIoDFQAAAAAdAAAAABAG&biw=1920&bih=965&dpr=1#lkt=LocalPoiReviews"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="mt-10 flex items-center justify-between rounded-full bg-white px-4 py-2 text-lg text-smoke-950 transition-all lg:justify-center lg:text-center lg:hover:scale-110"
+    >
+      Ver todas las reseñas
+    </a>
   </div>
 </section>
 
@@ -50,23 +46,26 @@ import { reviews } from "@/lib/reviews";
 
 <script>
   function init_reviews() {
-    const reviews_nav = document.querySelectorAll("#reviews-nav > button");
-    const reviews = document.querySelector("#reviews");
-    const wW = window.innerWidth;
+    function autoPlay() {
+      const reviews = document.querySelector("#reviews");
 
-    if (!reviews) return;
+      if (!reviews) return;
 
-    reviews_nav.forEach((el, ind) => {
-      el.addEventListener("mouseenter", () => {
-        reviews_nav.forEach((el) => el.classList.remove("active"));
-        el.classList.add("active");
-
+      if (reviews.scrollLeft >= reviews.scrollWidth - reviews.clientWidth) {
         reviews.scrollTo({
-          left: wW * ind,
+          left: 0,
+          behavior: "instant",
+        });
+      } else {
+        reviews.scrollBy({
+          left: 100,
           behavior: "smooth",
         });
-      });
-    });
+      }
+    }
+
+    autoPlay();
+    setInterval(autoPlay, 5000);
   }
 
   init_reviews();

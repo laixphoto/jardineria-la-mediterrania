@@ -6,7 +6,7 @@ const browser = await puppeteer.launch({ headless: "new" });
 const page = await browser.newPage();
 
 await page.goto(URL);
-await page.waitForSelector("article");
+await page.waitForSelector("div[role='tablist']");
 
 const posts = await page.evaluate(() => {
   const maxPosts = 9;
